@@ -1,5 +1,6 @@
 package au.edu.swin.sdmd.w06_myfirstintent
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.Toast
@@ -31,9 +32,12 @@ class MainActivity : AppCompatActivity() {
 
         val image = findViewById<ImageView>(R.id.mainImage)
         image.setOnClickListener {
-            Toast.makeText(this, "Set up the intent here and remove the toast",
-                Toast.LENGTH_SHORT).show()
+            //Toast.makeText(this, "Set up the intent here and remove the toast",
+            // Toast.LENGTH_SHORT).show()
             // TODO()
+            val intent = Intent(this, DetailActivity::class.java)
+
+            startActivity(intent)
         }
     }
 }
